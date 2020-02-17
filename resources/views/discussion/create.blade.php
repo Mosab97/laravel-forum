@@ -19,8 +19,8 @@
 
                 <div class="form-group">
                     <label for="content">Content</label>
-                    <textarea name="content" id="content" cols="5" rows="5" class="form-control"></textarea>
-                </div><!--  end content control -->
+                    <input id="content" type="hidden" name="content">
+                    <trix-editor input="content"></trix-editor>  </div><!--  end content control -->
 
                 <div class="form-group">
                     <label for="channel">Channel</label>
@@ -34,4 +34,11 @@
             </form> <!-- end form -->
         </div> <!-- end card body -->
     </div> <!-- end card -->
+@endsection
+@section('css')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix.css">
+@endsection
+@section('js')
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix-core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix.js"></script>
 @endsection
