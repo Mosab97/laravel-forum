@@ -20,7 +20,9 @@
                 <div class="form-group">
                     <label for="content">Content</label>
                     <input id="content" type="hidden" name="content">
-                    <trix-editor input="content"></trix-editor>  </div><!--  end content control -->
+                    <trix-editor input="content"></trix-editor>
+
+                </div><!--  end content control -->
 
                 <div class="form-group">
                     <label for="channel">Channel</label>
