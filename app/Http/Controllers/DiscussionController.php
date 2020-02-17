@@ -15,7 +15,7 @@ class DiscussionController extends Controller
 
     public function index()
     {
-        return view('discussion.index', [
+        return view('discussions.index', [
             'discussions' => Discussion::paginate(2)
         ]);
     }
@@ -23,15 +23,9 @@ class DiscussionController extends Controller
 
     public function create()
     {
-        return view('discussion.create');
+        return view('discussions.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(CreateDiscussionReqeust $request)
     {
             Discussion::create([
@@ -43,13 +37,15 @@ class DiscussionController extends Controller
 
         ]);
         session()->flash('success', 'Discussion Created successfully.');
-        return redirect(route('discussion.index'));
+        return redirect(route('discussions.index'));
     }
 
 
-    public function show($id)
+    public function show(Discussion $discussion)
     {
-        //
+        return view('discussions.show',[
+            'discussion'=>$discussion
+        ]);
     }
 
     /**

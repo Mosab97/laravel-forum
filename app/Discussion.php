@@ -6,8 +6,13 @@ namespace App;
 class Discussion extends Model
 {
 
-    public function user()
+    public function author()
     {
-        $this->belongsTo(User::class);
+      return  $this->belongsTo(User::class,'user_id');
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
     }
 }

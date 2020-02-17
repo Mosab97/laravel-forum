@@ -76,16 +76,26 @@
 
                 <div class="row">
                     <div class="col-md-4">
-                        <ul class="list-group">
 
-                            @foreach($channels as $channel )
-                                <li class="list-group-item">
+                        <a href="{{route('discussions.create')}}" class="btn btn-info mb-2" style="width: 100%;color: #fff">Add Discussion</a>
+                        <div class="card">
+                            <div class="card-header">
+                                Channels
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
 
-                                    {{$channel->name}}
-                                </li><!-- end li-->
+                                    @foreach($channels as $channel )
+                                        <li class="list-group-item">
 
-                            @endforeach
-                        </ul><!-- end ul-->
+                                            {{$channel->name}}
+                                        </li><!-- end li-->
+
+                                    @endforeach
+                                </ul><!-- end ul-->
+                            </div>
+                        </div>
+
                     </div> <!-- end col-4 -->
 
                     <div class="col-md-8">
