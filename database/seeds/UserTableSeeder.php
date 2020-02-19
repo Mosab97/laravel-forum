@@ -17,5 +17,14 @@ class UserTableSeeder extends Seeder
             'password' => \Illuminate\Support\Facades\Hash::make('test@test.com'),
 
         ]);
+
+
+        \App\User::create([
+            'name' => 'Mosab2',
+            'email'=> 'test2@test.com',
+            'password' => \Illuminate\Support\Facades\Hash::make('test2@test.com'),
+
+        ]);
+
     }
 }

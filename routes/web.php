@@ -17,6 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('discussions/{discussion}/replies/{reply}/mark-as-a-best-reply','DiscussionController@reply')->name('disccussion.bets-reply');
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('discussions','DiscussionController');
 Route::resource('discussions/{discussion}/replies','RepliesController');
+

@@ -34,6 +34,7 @@ class RepliesController extends Controller
            }//end of store
 
 
+
            public function show($id)
            {
                //
