@@ -23,7 +23,6 @@ class RepliesController extends Controller
 
            public function store(CreateReplyRequest $request,Discussion $discussion)
            {
-//               dd(55);
                Reply::create([
                        'content' => $request->content,
                    'discussion_id' => $discussion->id,
