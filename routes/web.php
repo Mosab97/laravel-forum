@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('users/notifications','UsersController@notifications')->name('users.notifications');
 Route::post('discussions/{discussion}/replies/{reply}/mark-as-a-best-reply','DiscussionController@reply')->name('disccussion.bets-reply');
 
 

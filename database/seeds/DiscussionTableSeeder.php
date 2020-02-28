@@ -13,7 +13,7 @@ class DiscussionTableSeeder extends Seeder
     {
         \App\Discussion::create([
             'user_id' => 1,
-           'title' => "And this will return to us the path of that file",
+           'title' => "Dis 1",
             'content' => "test content",
             'slug' => str_slug( "And this will return to us the path of that file",'-'),
             'channel_id' =>1,
@@ -22,7 +22,7 @@ class DiscussionTableSeeder extends Seeder
 
         \App\Discussion::create([
             'user_id' => 2,
-            'title' => "And 22 this will return to us the path of that file",
+            'title' => "Dis 2",
             'content' => "test content",
             'slug' => str_slug( "And 22 this will return to us the path of that file",'-'),
             'channel_id' =>3,
